@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-image: url('./img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#logo {
+    height:70px;
+}
+
+nav ul {
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+}
+
+nav ul a {
+    text-decoration: none;
+} */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap; /* Permite que o conteúdo quebre linha em telas menores */
+}
+
+#logo {
+    height: 70px;
+}
+
+nav ul {
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo padrão para links */
+nav ul li a {
+    text-decoration: none;
+    padding: 0 10px 0 0;
+    display: block; /* Garante que o link ocupe toda a área clicável */
+}
+
+/* Ícone do hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: gray;
+    margin: 4px 0;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Esconde os links da navegação inicialmente */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 5px;
+    }
+
+    /* Exibe o hamburger menu */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Exibe o menu de navegação ao clicar no hamburger */
+    nav ul.active {
+        display: flex;
+    }
+}
