@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 20px 0 20px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+.form-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin-top: -50px; /* Ajuste para sobrepor a imagem */
+    box-sizing: border-box; /* Garantir que o padding não exceda a largura */
+}
+
+.logo img {
+    width: 40%; /* Usa % para ajustar automaticamente o tamanho */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem; /* Usar rem em vez de px */
+    box-sizing: border-box; /* Garantir que o padding não exceda a largura */
+}
+
+.password-container {
+    position: relative;
+}
+
+.show-password-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #1E232C;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem; /* Usar rem em vez de px */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 480px) {
+    .form-section {
+        padding: 15px; /* Reduzir padding em telas menores */
+        margin-top: -30px; /* Ajustar a sobreposição da imagem */
+    }
+
+    .logo img {
+        width: 60%; /* Ajuste o tamanho da logo em telas menores */
+    }
+
+    input[type="email"],
+    input[type="password"],
+    button[type="submit"] {
+        font-size: 0.9rem; /* Reduzir a fonte em telas menores */
+        padding: 12px; /* Reduzir o padding dos inputs e botão */
+    }
+
+    .show-password-icon {
+        right: 10px; /* Ajustar a posição do ícone */
+    }
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 5px 0;
+}
