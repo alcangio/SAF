@@ -3,33 +3,16 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 main {
     background-image: url('./img/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
 }
-
-/* nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-#logo {
-    height:70px;
-}
-
-nav ul {
-    display: flex;
-    text-align: center;
-    list-style-type: none;
-}
-
-nav ul a {
-    text-decoration: none;
-} */
 
 nav {
     display: flex;
@@ -51,10 +34,23 @@ nav ul {
     padding: 0;
 }
 
+/* efeito links do menu */
+nav ul a {
+    color: #1E232C;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul a:hover {
+    color:white;
+    background-color: #35C2C1;
+    transform: scale(1.1);
+}
+
 /* Estilo padrão para links */
 nav ul li a {
     text-decoration: none;
-    padding: 0 10px 0 0;
+    padding: 0 10px 0 10px;
     display: block; /* Garante que o link ocupe toda a área clicável */
 }
 
@@ -96,4 +92,10 @@ nav ul li a {
     nav ul.active {
         display: flex;
     }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 5px 0;
 }
