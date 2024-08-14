@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -15,10 +15,10 @@ html, body {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    min-height: 100vh;
     padding: 0 20px 0 20px;
     box-sizing:border-box;
 }
+
 
 .image-section img {
     width: 100%;
@@ -118,4 +118,9 @@ footer {
     padding: 5px 0 5px 0;
     font-size: 0.9rem;
     color:  grey;
+    margin: 0;
+}
+
+footer p {
+    margin: 0;
 }

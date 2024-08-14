@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAF | Contribuição</title>
+    <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
+    <!-- conexão com o css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contribuicao.css">
+    <!-- conexão com o javascript -->
+    <script src="../script.js" defer></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="./index.html"><img id="logo" src="../img/logo/logo.png" alt="logo do projeto Sombra e Água Fresca"></a>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="#home">Programação</a></li>
+                <li><a href="#about">Alunos</a></li>
+                <li class="dropdown">
+                    <a href="#voluntarios">Voluntários</a>
+                    <ul class="dropdown-content">
+                        <li><a href="../public/voluntario.html">Cadastrar novo voluntário</a></li>
+                        <li><a href="../public/contribuicao.html">Informar contribuição</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <h1>Informar contribuição</h1>
+            <form action="processar_participacao.php" method="post">
+                <!-- Campo para selecionar o nome do voluntário -->
+                <!-- Subtítulo -->
+                <h2>Voluntário</h2>
+                <label for="nome">Nome</label>
+                <select id="nome" name="nome">
+                    <option value="">Selecione um voluntário</option>
+                    <option value="voluntario1">Voluntário 1</option>
+                    <option value="voluntario2">Voluntário 2</option>
+                    <option value="voluntario3">Voluntário 3</option>
+                    <!-- Adicione mais opções conforme necessário -->
+                </select>
+                <p>&#x26A0;&#xFE0F; Se ainda não se cadastrou, <a href="voluntario.html">faça aqui</a>.</p></form> </br>
+
+                <!-- Campo para selecionar a data -->
+                <label for="data">Informe a data</label>
+                <input type="date" id="data" name="data" required>
+
+                <!-- Subtítulo -->
+                <h2>Sua contribuição</h2>
+
+                <!-- Campo para selecionar a atividade -->
+                <label for="atividade">Atividade</label>
+                <select id="atividade" name="atividade">
+                    <option value="">Selecione uma atividade</option>
+                    <option value="atividade1">Atividade 1</option>
+                    <option value="atividade2">Atividade 2</option>
+                    <option value="atividade3">Atividade 3</option>
+                    <!-- Adicione mais opções conforme necessário -->
+                </select>
+                <p>&#x1F4DD; Cadastre nova atividade <a href="atividade.html">aqui</a>.</p></form> </br>
+
+                <!-- Caixa de seleção para o lanche -->
+                <label>Lanche</label>
+                <div class="radio-group">
+                    <div class="opcao-lanche">
+                    <input type="radio" id="lanche_sim" name="lanche" value="sim">
+                    <label for="lanche_sim">SIM</label>
+                    </div>
+                    <div class="opcao-lanche">
+                    <input type="radio" id="lanche_nao" name="lanche" value="nao">
+                    <label for="lanche_nao">NÃO</label>
+                    </div>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados ©️ 2024.</p>
+    </footer>
+</body>
+</html>
