@@ -2,16 +2,16 @@
 
 ## Banco de Dados
 ### Modelagem
-[Modelo Conceitual](https://app.brmodeloweb.com/#!/publicview/66be4027a66393af24a5e53b)
+#### [Modelo Conceitual](https://app.brmodeloweb.com/#!/publicview/66be4027a66393af24a5e53b)
 
 ![image](https://github.com/user-attachments/assets/6daa5be5-bc6e-48e6-a529-67255556db9a)
 
 
-[Modelo Lógico](https://app.brmodeloweb.com/#!/publicview/66be4273a66393af24a5e70d)
+#### [Modelo Lógico](https://app.brmodeloweb.com/#!/publicview/66be4273a66393af24a5e70d)
 
 ![image](https://github.com/user-attachments/assets/81c69a32-1f2d-42ae-9c1d-c9f7e61ff9f4)
 
-[Script de Criação do Banco de Dados e Tabelas - MySQL](https://github.com/alcangio/SAF/blob/main/banco_saf.sql)
+#### [Script de Criação do Banco de Dados e Tabelas - MySQL](https://github.com/alcangio/SAF/blob/main/banco_saf.sql)
 ```
 -- Criar o banco de dados
 CREATE DATABASE banco_saf;
@@ -84,3 +84,4 @@ CREATE TABLE presenca (
 );
 
 ```
+#### Consultas SQL
