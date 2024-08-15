@@ -11,7 +11,7 @@
 
 ![image](https://github.com/user-attachments/assets/81c69a32-1f2d-42ae-9c1d-c9f7e61ff9f4)
 
-Script de Criação do Banco de Dados e Tabelas - MySQL
+[Script de Criação do Banco de Dados e Tabelas - MySQL](https://github.com/alcangio/SAF/blob/main/banco_saf.sql)
 ```
 -- Criar o banco de dados
 CREATE DATABASE banco_saf;
