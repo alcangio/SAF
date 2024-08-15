@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    
 </head>
 <body>
     <header>
@@ -44,48 +43,39 @@
     <main>
         <div class="form-container">
             <h1>Informar contribuição</h1>
-            <form action="processar_participacao.php" method="post">
+            <form action="/contribuicao" method="post">
                 <!-- Campo para selecionar o nome do voluntário -->
-                <!-- Subtítulo -->
                 <h2>Voluntário</h2>
-                <label for="nome">Nome</label>
-                <select id="nome" name="nome">
+                <label for="id_voluntario">Voluntário</label>
+                <select id="id_voluntario" name="id_voluntario" required>
                     <option value="">Selecione um voluntário</option>
-                    <option value="voluntario1">Voluntário 1</option>
-                    <option value="voluntario2">Voluntário 2</option>
-                    <option value="voluntario3">Voluntário 3</option>
-                    <!-- Adicione mais opções conforme necessário -->
+                    <!-- Opções serão carregadas dinamicamente -->
                 </select>
-                <p>&#x26A0;&#xFE0F; Se ainda não se cadastrou, <a href="voluntario.html">faça aqui</a>.</p></form> </br>
+                <p>&#x26A0;&#xFE0F; Se ainda não se cadastrou, <a href="voluntario.html">faça aqui</a>.</p>
 
                 <!-- Campo para selecionar a data -->
                 <label for="data">Informe a data</label>
                 <input type="date" id="data" name="data" required>
 
-                <!-- Subtítulo -->
-                <h2>Sua contribuição</h2>
-
                 <!-- Campo para selecionar a atividade -->
-                <label for="atividade">Atividade</label>
-                <select id="atividade" name="atividade">
+                <h2>Sua contribuição</h2>
+                <label for="id_atividade">Atividade</label>
+                <select id="id_atividade" name="id_atividade" required>
                     <option value="">Selecione uma atividade</option>
-                    <option value="atividade1">Atividade 1</option>
-                    <option value="atividade2">Atividade 2</option>
-                    <option value="atividade3">Atividade 3</option>
-                    <!-- Adicione mais opções conforme necessário -->
+                    <!-- Opções serão carregadas dinamicamente -->
                 </select>
-                <p>&#x1F4DD; Cadastre nova atividade <a href="atividade.html">aqui</a>.</p></form> </br>
+                <p>&#x1F4DD; Cadastre nova atividade <a href="atividade.html">aqui</a>.</p>
 
                 <!-- Caixa de seleção para o lanche -->
                 <label>Lanche</label>
                 <div class="radio-group">
                     <div class="opcao-lanche">
-                    <input type="radio" id="lanche_sim" name="lanche" value="sim">
-                    <label for="lanche_sim">SIM</label>
+                        <input type="radio" id="lanche_sim" name="lanche" value="1">
+                        <label for="lanche_sim">SIM</label>
                     </div>
                     <div class="opcao-lanche">
-                    <input type="radio" id="lanche_nao" name="lanche" value="nao">
-                    <label for="lanche_nao">NÃO</label>
+                        <input type="radio" id="lanche_nao" name="lanche" value="0">
+                        <label for="lanche_nao">NÃO</label>
                     </div>
                 </div>
 
@@ -96,5 +86,10 @@
     <footer>
         <p>Todos os direitos reservados ©️ 2024.</p>
     </footer>
-</body>
-</html>
+    <script>
+        // Função para carregar voluntários e atividades
+        async function carregarOpcoes() {
+            try {
+                const [voluntariosResponse, atividadesResponse] = await Promise.all([
+                    fetch('/api/voluntarios'),
+                    fetch('/api
