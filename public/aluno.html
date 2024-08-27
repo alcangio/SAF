@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAF | Contribuição</title>
+    <title>SAF | Cadastro de Aluno</title>
     <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
     <!-- conexão com o css -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/contribuicao.css">
+    <link rel="stylesheet" href="../css/identidade_visual">
     <!-- conexão com o javascript -->
     <script src="../script.js" defer></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <header>
@@ -49,54 +50,32 @@
     </header>
     <main>
         <div class="form-container">
-            <h1>Informar contribuição</h1>
-            <form action="/contribuicao" method="post">
-                <!-- Campo para selecionar o nome do voluntário -->
-                <h2>Voluntário</h2>
-                <label for="id_voluntario">Voluntário</label>
-                <select id="id_voluntario" name="id_voluntario" required>
-                    <option value="">Selecione um voluntário</option>
-                    <!-- Opções serão carregadas dinamicamente -->
-                </select>
-                <p>&#x26A0;&#xFE0F; Se ainda não se cadastrou, <a href="voluntario.html">faça aqui</a>.</p>
-
-                <!-- Campo para selecionar a data -->
-                <label for="data">Informe a data</label>
-                <input type="date" id="data" name="data" required>
-
-                <!-- Campo para selecionar a atividade -->
-                <h2>Sua contribuição</h2>
-                <label for="id_atividade">Atividade</label>
-                <select id="id_atividade" name="id_atividade" required>
-                    <option value="">Selecione uma atividade</option>
-                    <!-- Opções serão carregadas dinamicamente -->
-                </select>
-                <p>&#x1F4DD; Cadastre nova atividade <a href="atividade.html">aqui</a>.</p>
-
-                <!-- Caixa de seleção para o lanche -->
-                <label>Lanche</label>
-                <div class="radio-group">
-                    <div class="opcao-lanche">
-                        <input type="radio" id="lanche_sim" name="lanche" value="1">
-                        <label for="lanche_sim">SIM</label>
-                    </div>
-                    <div class="opcao-lanche">
-                        <input type="radio" id="lanche_nao" name="lanche" value="0">
-                        <label for="lanche_nao">NÃO</label>
-                    </div>
+            <h2>Cadastrar Novo Aluno</h2>
+            <form action="/cadastrar-aluno" method="POST">
+                <div class="form-group">
+                    <label for="nome-aluno">Nome do Aluno:</label>
+                    <input type="text" id="nome-aluno" name="nome-aluno" required>
                 </div>
-
-                <button type="submit">Enviar</button>
+                <div class="form-group">
+                    <label for="nome-responsavel">Nome do Responsável:</label>
+                    <input type="text" id="nome-responsavel" name="nome-responsavel" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone-responsavel">Telefone do Responsável:</label>
+                    <input type="tel" id="telefone-responsavel" name="telefone-responsavel" required pattern="[0-9]{2}-[0-9]{4,5}-[0-9]{4}" placeholder="Formato: 99-99999-9999">
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Cadastrar Aluno">
+                </div>
             </form>
         </div>
     </main>
     <footer>
         <p>Todos os direitos reservados ©️ 2024.</p>
     </footer>
-    <script>
-        // Função para carregar voluntários e atividades
-        async function carregarOpcoes() {
-            try {
-                const [voluntariosResponse, atividadesResponse] = await Promise.all([
-                    fetch('/api/voluntarios'),
-                    fetch('/api
+</body>
+</html>

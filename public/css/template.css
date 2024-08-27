@@ -1,0 +1,158 @@
+/* html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+} */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap; /* Permite que o conteúdo quebre linha em telas menores */
+}
+
+#logo {
+    height: 70px;
+}
+
+nav ul {
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* efeito links do menu */
+nav ul a {
+    color: #1E232C;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Aplicando o efeito de transformação somente nos itens fora do dropdown */
+nav > ul > li > a:hover {
+    color: white;
+    background-color: #35C2C1;
+    transform: scale(1.1);
+}
+
+/* Estilo padrão para links */
+nav ul li {
+    position: relative; /* Necessário para o dropdown */
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 0 10px;
+    display: block; /* Garante que o link ocupe toda a área clicável */
+}
+
+/* Estilos para o dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content li {
+    text-align: left; /* Alinhar os itens à esquerda */
+}
+
+.dropdown-content li a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: #1E232C;
+    transition: background-color 0.3s ease; /* Transição apenas para a cor */
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd; /* Muda a cor de fundo no hover */
+    color: #1E232C; /* Mantém a cor do texto */
+}
+
+/* Mostrar o dropdown ao passar o mouse sobre "Voluntários" */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Ícone do hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: gray;
+    margin: 4px 0;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Esconde os links da navegação inicialmente */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 5px;
+    }
+
+    /* Exibe o hamburger menu */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Exibe o menu de navegação ao clicar no hamburger */
+    nav ul.active {
+        display: flex;
+    }
+}
+
+footer {
+    text-align: center;
+    height: 100%;
+    position: relative;
+    bottom: 0;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    color: grey;
+    margin: 0;
+}
+
+footer p {
+    margin: 0;
+}
