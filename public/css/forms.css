@@ -14,7 +14,6 @@ main {
     box-sizing: border-box;
 }
 
-
 label {
     display: block;
     margin: 10px 0 5px 0;
@@ -22,6 +21,36 @@ label {
     color: #1E232C;
 }
 
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #1E232C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* CONTRIBUIÇÃO */
 input[type="date"],
 select,
 .radio-group {
@@ -48,20 +77,4 @@ select,
 
 .opcao-lanche label {
     padding-left: 10px;
-}
-
-button[type="submit"] {
-    width: 100%;
-    padding: 15px;
-    background-color: #1E232C;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: #333;
 }
