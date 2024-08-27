@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAF | Fale Conosco</title>
+    <title>SAF | Cadastro de Atividade</title>
     <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
     <!-- conexão com o css -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../public/css/forms.css">
+    <link rel="stylesheet" href="/public/css/forms.css">
     <!-- conexão com o javascript -->
     <script src="../script.js" defer></script>
     <!-- Google Fonts -->
@@ -51,16 +51,19 @@
         </nav>
     </header>
     <main>
-        <div class="form-container" style="display: flex; flex-direction:column; align-items:center; border: 0.5px solid ligthgray;">
-            <h1>Contato</h1>
-                <address>
-                    <strong>Nome:</strong> João Silva<br>
-                    <strong>Telefone:</strong> <a href="tel:+5531999999999">(31) 99999-9999</a><br>
-                    <strong>Email:</strong> <a href="mailto:joao.silva@email.com">joao.silva@email.com</a>
-                </address>
-                <img src="../img/fish.png" alt="desenho de peixe colorido em tons de vermelho e amarelo, logo do projeto Sombra e Água Fresca" style="width:20%; padding-top:1.5rem; margin-bottom: 20px">
+        <div class="form-container">
+            <h1>Cadastrar nova atividade</h1>
+            <form action="submit_form.php" method="POST">
+                <label for="nome-atividade">Nome da atividade</label>
+                <input type="text" id="nome-atividade" name="nome-atividade" placeholder="Digite o nome da atividade" required>
+        
+                <p>&#x26A0;&#xFE0F; Verifique se a atividade já foi cadastrada: <a href="atividade.html">clique aqui</a>.</p><br><br>
+        
+                <button type="submit">Cadastrar</button>
+            </form>
         </div>
     </main>
+    
     <footer>
         <p>Todos os direitos reservados ©️ 2024.</p>
     </footer>
