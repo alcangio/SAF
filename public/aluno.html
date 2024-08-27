@@ -14,6 +14,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        /* Permite a barra de rolagem na página */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Altura da janela do navegador */
+            overflow: auto; /* Exibe a barra de rolagem quando necessário */
+        }
+        
+        .form-container {
+            padding: 20px;
+            /* Ajuste a altura conforme necessário */
+            height: 120vh; /* Exemplo para forçar conteúdo a exceder a altura da janela */
+        }
+    </style>
     
 </head>
 <body>
@@ -28,7 +43,7 @@
                 <div></div>
             </div>
             <ul>
-                <li><a href="#home">Programação</a></li>
+                <li><a href="../public/index.html">Programação</a></li>
                 <li class="dropdown">
                     <a href="#voluntarios">Alunos</a>
                     <ul class="dropdown-content">
@@ -50,7 +65,7 @@
     </header>
     <main>
         <div class="form-container">
-            <h1>Cadastrar Novo Aluno</h1>
+            <h1>Cadastrar novo aluno</h1>
             <form action="/cadastrar-aluno" method="POST">
                 <div class="form-group">
                     <label for="nome-aluno">Nome do aluno:</label>
@@ -65,14 +80,66 @@
                     <input type="tel" id="telefone-responsavel" name="telefone-responsavel" required pattern="[0-9]{2}-[0-9]{4,5}-[0-9]{4}" placeholder="Formato: 99-99999-9999">
                 </div>
                 <div class="form-group">
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" name="endereco" required>
+                    <label for="endereco">Logradouro:</label>
+                    <input type="text" id="logradouro" name="logradouro" required>
                 </div>
-                
+                <div class="form-group">
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" name="numero" required>
+                </div>
+                <div class="form-group">
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento">
+                </div>
+                <div class="form-group">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" required>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+                <div class="form-group">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="" disabled selected>Selecione um estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required pattern="\d{5}-?\d{3}" placeholder="Formato: 99999-999">
+                </div>
+        
                 <button type="submit">Enviar</button>
-                
             </form>
         </div>
+        
     </main>
     <footer>
         <p>Todos os direitos reservados ©️ 2024.</p>
