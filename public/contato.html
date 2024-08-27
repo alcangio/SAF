@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAF | Cadastro de Aluno</title>
+    <title>SAF | Fale Conosco</title>
     <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
     <!-- conexão com o css -->
     <link rel="stylesheet" href="../css/style.css">
@@ -28,7 +28,7 @@
                 <div></div>
             </div>
             <ul>
-                <li><a href="#home">Programação</a></li>
+                <li><a href="../public/index.html">Programação</a></li>
                 <li class="dropdown">
                     <a href="#voluntarios">Alunos</a>
                     <ul class="dropdown-content">
@@ -49,29 +49,14 @@
         </nav>
     </header>
     <main>
-        <div class="form-container">
-            <h1>Cadastrar Novo Aluno</h1>
-            <form action="/cadastrar-aluno" method="POST">
-                <div class="form-group">
-                    <label for="nome-aluno">Nome do aluno:</label>
-                    <input type="text" id="nome-aluno" name="nome-aluno" required>
-                </div>
-                <div class="form-group">
-                    <label for="nome-responsavel">Nome do responsável:</label>
-                    <input type="text" id="nome-responsavel" name="nome-responsavel" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefone-responsavel">Telefone do responsável:</label>
-                    <input type="tel" id="telefone-responsavel" name="telefone-responsavel" required pattern="[0-9]{2}-[0-9]{4,5}-[0-9]{4}" placeholder="Formato: 99-99999-9999">
-                </div>
-                <div class="form-group">
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" name="endereco" required>
-                </div>
-                
-                <button type="submit">Enviar</button>
-                
-            </form>
+        <div class="form-container" style="display: flex; flex-direction:column; align-items:center; border: 0.5px solid ligthgray;">
+            <h1>Contato</h1>
+                <address>
+                    <strong>Nome:</strong> João Silva<br>
+                    <strong>Telefone:</strong> <a href="tel:+5531999999999">(31) 99999-9999</a><br>
+                    <strong>Email:</strong> <a href="mailto:joao.silva@email.com">joao.silva@email.com</a>
+                </address>
+                <img src="../img/fish.png" alt="desenho de peixe colorido em tons de vermelho e amarelo, logo do projeto Sombra e Água Fresca" style="width:20%; padding-top:1.5rem; margin-bottom: 20px">
         </div>
     </main>
     <footer>
